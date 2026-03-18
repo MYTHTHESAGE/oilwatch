@@ -1,0 +1,20 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Backend & ML
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+pydantic
+earthengine-api
+torch
+torchvision
+numpy
+python-dotenv
+
+# Frontend
+streamlit
+folium
+streamlit-folium
+requests
+pandas
