@@ -105,6 +105,7 @@ try:
         history_data = history_resp.json()
         if history_data:
             df = pd.DataFrame(history_data)
+            df = df.rename(columns={'created_at': 'timestamp'})
             df = df[['timestamp', 'spill_detected', 'area_km2', 'confidence']]
             df['timestamp'] = pd.to_datetime(df['timestamp']).dt.strftime('%Y-%m-%d %H:%M:%S')
             history_placeholder.dataframe(df, use_container_width=True)
